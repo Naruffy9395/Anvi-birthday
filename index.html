@@ -7,13 +7,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="Style.css">
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
 </head>
 <body>
 
 <canvas id="confetti"></canvas>
 
-<!-- Floating balloons -->
 <div class="balloons" aria-hidden="true">
   <div class="balloon b1">🎈</div>
   <div class="balloon b2">🎈</div>
@@ -23,23 +25,21 @@
   <div class="balloon b6">🎈</div>
 </div>
 
-<!-- HERO SECTION -->
-<header class="hero" id="hero">
-  <div class="hero-content">
-    <p class="pre-title">A Very Special Day</p>
-    <h1 class="hero-title">Happy Birthday</h1>
-    <h1 class="hero-name">Anvi</h1>
-    <div class="age-badge">
-      <span class="num">6</span>
-      <span class="label">years old today!</span>
-    </div>
-    <p class="scroll-hint">Scroll down to explore <span class="arrow-down">&darr;</span></p>
+<!-- HERO -->
+<header class="hero">
+  <p class="pre-title">✨ A Very Special Day ✨</p>
+  <h1 class="hero-title">Happy Birthday</h1>
+  <h1 class="hero-name">Anvi</h1>
+  <div class="age-badge">
+    <span class="num">6</span>
+    <span class="label">years old today!</span>
   </div>
+  <p class="scroll-hint" id="scrollHint">scroll down <span class="arrow-down">&darr;</span></p>
 </header>
 
-<!-- PHOTO GRID SECTION -->
+<!-- PHOTO GRID -->
 <section class="photo-grid-section">
-  <h2 class="section-title reveal-up">Our Sweet Moments</h2>
+  <h2 class="section-title reveal-up">Our Sweet Moments 🌸</h2>
   <p class="section-subtitle reveal-up">Every picture tells a little story of joy</p>
   <div class="photo-grid">
     <div class="photo-card reveal-up d1">
@@ -67,9 +67,9 @@
 
 <div class="divider reveal-up">🎀 🌷 🎈 🌷 🎀</div>
 
-<!-- ALTERNATING POLAROIDS -->
+<!-- POLAROIDS -->
 <section class="polaroid-section">
-  <h2 class="section-title reveal-up">Little Adventures</h2>
+  <h2 class="section-title reveal-up">Little Adventures 🧸</h2>
   <p class="section-subtitle reveal-up">Growing up so fast, one moment at a time</p>
 
   <div class="polaroid reveal-left">
@@ -77,25 +77,21 @@
     <img src="photo6.png" alt="Anvi adventure 1">
     <div class="polaroid-caption">My superhero</div>
   </div>
-
   <div class="polaroid reveal-right">
     <div class="polaroid-sticker right">🌈</div>
     <img src="photo7.png" alt="Anvi adventure 2">
     <div class="polaroid-caption">Bright as a rainbow</div>
   </div>
-
   <div class="polaroid reveal-left">
     <div class="polaroid-sticker">💫</div>
     <img src="photo8.png" alt="Anvi adventure 3">
     <div class="polaroid-caption">Shining always</div>
   </div>
-
   <div class="polaroid reveal-right">
     <div class="polaroid-sticker right">🦋</div>
     <img src="photo9.png" alt="Anvi adventure 4">
     <div class="polaroid-caption">Little butterfly</div>
   </div>
-
   <div class="polaroid reveal-left">
     <div class="polaroid-sticker">🌸</div>
     <img src="photo10.png" alt="Anvi adventure 5">
@@ -105,21 +101,140 @@
 
 <div class="divider reveal-up">🌟 🎂 🧁 🎂 🌟</div>
 
-<!-- BIRTHDAY WISHES SECTION -->
+<!-- SCRAPBOOK with new photos 11-14 -->
+<section class="scrapbook-section">
+  <h2 class="section-title reveal-up">Playful Days 🎨</h2>
+  <p class="section-subtitle reveal-up">Scattered memories full of fun</p>
+  <div class="scrap-wrap">
+    <div class="scrap reveal-zoom r1"><img src="photo11.png" alt="Anvi photo 11"></div>
+    <div class="scrap reveal-zoom r2"><img src="photo12.png" alt="Anvi photo 12"></div>
+    <div class="scrap reveal-zoom r3"><img src="photo13.png" alt="Anvi photo 13"></div>
+    <div class="scrap reveal-zoom r4"><img src="photo14.png" alt="Anvi photo 14"></div>
+  </div>
+</section>
+
+<div class="divider reveal-up">🎀 📖 🌸 📖 🎀</div>
+
+<!-- FLIP BOOK -->
+<section class="book-section">
+  <h2 class="section-title reveal-up">Anvi's Memory Book 📖</h2>
+  <p class="book-hint reveal-up">scroll to turn the pages</p>
+
+  <div class="book-scroll-track" id="bookTrack">
+    <div class="book-sticky">
+      <div class="book" id="book">
+        <div class="book-spine"></div>
+
+        <!-- Cover -->
+        <div class="page cover" data-index="0">
+          <div class="page-face front cover-front">
+            <div class="cover-deco-top">🎀</div>
+            <span class="cover-title">Anvi's<br>Memories</span>
+            <div class="cover-deco-bottom">🌸💫🌸</div>
+          </div>
+          <div class="page-face back">
+            <img src="photo1.png" alt="Anvi memory 1">
+            <div class="page-label">My little star</div>
+          </div>
+        </div>
+
+        <!-- Page 1: photos 2 & 3 -->
+        <div class="page" data-index="1">
+          <div class="page-face front">
+            <img src="photo2.png" alt="Anvi memory 2">
+            <div class="page-label">So much happiness</div>
+          </div>
+          <div class="page-face back">
+            <img src="photo3.png" alt="Anvi memory 3">
+            <div class="page-label">Pure sunshine</div>
+          </div>
+        </div>
+
+        <!-- Page 2: photos 4 & 5 -->
+        <div class="page" data-index="2">
+          <div class="page-face front">
+            <img src="photo4.png" alt="Anvi memory 4">
+            <div class="page-label">Cutie pie</div>
+          </div>
+          <div class="page-face back">
+            <img src="photo5.png" alt="Anvi memory 5">
+            <div class="page-label">Always smiling</div>
+          </div>
+        </div>
+
+        <!-- Page 3: photos 6 & 7 -->
+        <div class="page" data-index="3">
+          <div class="page-face front">
+            <img src="photo6.png" alt="Anvi memory 6">
+            <div class="page-label">My superhero</div>
+          </div>
+          <div class="page-face back">
+            <img src="photo7.png" alt="Anvi memory 7">
+            <div class="page-label">Bright as a rainbow</div>
+          </div>
+        </div>
+
+        <!-- Page 4: photos 8 & 9 -->
+        <div class="page" data-index="4">
+          <div class="page-face front">
+            <img src="photo8.png" alt="Anvi memory 8">
+            <div class="page-label">Shining always</div>
+          </div>
+          <div class="page-face back">
+            <img src="photo9.png" alt="Anvi memory 9">
+            <div class="page-label">Little butterfly</div>
+          </div>
+        </div>
+
+        <!-- Page 5: photos 10 & 11 -->
+        <div class="page" data-index="5">
+          <div class="page-face front">
+            <img src="photo10.png" alt="Anvi memory 10">
+            <div class="page-label">My whole world</div>
+          </div>
+          <div class="page-face back">
+            <img src="photo11.png" alt="Anvi memory 11">
+            <div class="page-label">Playful days</div>
+          </div>
+        </div>
+
+        <!-- Page 6: photos 12 & 13 -->
+        <div class="page" data-index="6">
+          <div class="page-face front">
+            <img src="photo12.png" alt="Anvi memory 12">
+            <div class="page-label">Sweet giggles</div>
+          </div>
+          <div class="page-face back">
+            <img src="photo13.png" alt="Anvi memory 13">
+            <div class="page-label">Growing up fast</div>
+          </div>
+        </div>
+
+        <!-- Page 7: photo 14 + closing -->
+        <div class="page" data-index="7">
+          <div class="page-face front">
+            <img src="photo14.png" alt="Anvi memory 14">
+            <div class="page-label">Forever my baby</div>
+          </div>
+          <div class="page-face back cover-back">
+            <div class="cover-deco-top">💖</div>
+            <span class="cover-title">Happy 6th<br>Birthday<br>Anvi!</span>
+            <div class="cover-deco-bottom">🎂🎈🎀🎈🎂</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WISHES -->
 <section class="wishes-section">
-  <h2 class="section-title reveal-up">A Message For You</h2>
+  <h2 class="section-title reveal-up">A Message For You 💌</h2>
   <div class="wish-card reveal-zoom">
     <div class="wish-icon">💌</div>
-    <p class="wish-text">
-      Happy 6th Birthday, my dearest Anvi! You bring so much light and laughter into our lives.
-      Every day with you is a gift, and watching you grow is the greatest joy.
-      May your life be filled with as much happiness as you give to everyone around you.
-    </p>
-    <p class="wish-text">
-      You are the most precious little sister in the whole world.
-      Keep smiling, keep shining, and keep being the amazing little person you are.
-      The world is brighter because you are in it!
-    </p>
+    <p class="wish-text">Happy 6th Birthday, my dearest Anvi! You bring so much light and laughter into our lives. Every day with you is a gift, and watching you grow is the greatest joy. May your life be filled with as much happiness as you give to everyone around you.</p>
+    <p class="wish-text">You are the most precious little sister in the whole world. Keep smiling, keep shining, and keep being the amazing little person you are. The world is brighter because you are in it!</p>
     <div class="wish-signoff">
       <p class="from">With all my love,</p>
       <p class="from-name">Bhai 💖</p>
@@ -127,9 +242,9 @@
   </div>
 </section>
 
-<!-- CAKE SECTION -->
+<!-- CAKE -->
 <section class="cake-section">
-  <h2 class="section-title reveal-up">Make a Wish!</h2>
+  <h2 class="section-title reveal-up">Make a Wish! 🎂</h2>
   <div class="cake-container reveal-zoom" id="cakeContainer">
     <div class="cake">
       <div class="cake-plate"></div>
@@ -137,11 +252,11 @@
       <div class="cake-layer middle"></div>
       <div class="cake-layer top"></div>
       <div class="candle">
-        <div class="flame"></div>
+        <div class="flame" id="flame"></div>
       </div>
     </div>
     <p class="cake-hint">Tap the cake to blow out the candle!</p>
-    <div class="cake-message" id="cakeMessage">Wish granted! Your wish will come true!</div>
+    <div class="cake-message" id="cakeMessage">Wish granted! Your wish will come true! 🌟</div>
   </div>
 </section>
 
