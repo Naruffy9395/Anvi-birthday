@@ -1,0 +1,13 @@
+{
+  "name": "anvi-birthday",
+  "version": "1.0.0",
+  "description": "Happy Birthday Anvi - birthday wish website",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
