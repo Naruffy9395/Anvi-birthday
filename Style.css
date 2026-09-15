@@ -240,7 +240,7 @@ h1, h2 { font-family: 'Pacifico', cursive; font-weight: 400; }
 .book-hint { font-size: 0.85rem; color: var(--pink); margin-bottom: 16px; opacity: 0.8; }
 
 .book-scroll-track {
-  height: 900vh; /* 8 pages × ~100vh each */
+  height: 400vh; /* 3 pages × ~100vh each */
   position: relative;
 }
 .book-sticky {
@@ -448,7 +448,7 @@ h1, h2 { font-family: 'Pacifico', cursive; font-weight: 400; }
   .age-badge { width: 130px; height: 130px; }
   .age-badge .num { font-size: 2.4rem; }
   .book { width: 260px; height: 360px; }
-  .book-scroll-track { height: 800vh; }
+  .book-scroll-track { height: 350vh; }
   .scrap { width: 110px; height: 110px; }
 }
 
