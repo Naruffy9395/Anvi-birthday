@@ -3,153 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Anvi! 🎀</title>
+<title>Happy Birthday Anvi!</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <canvas id="confetti"></canvas>
 
-<div class="balloons">
+<!-- Floating balloons -->
+<div class="balloons" aria-hidden="true">
   <div class="balloon b1">🎈</div>
   <div class="balloon b2">🎈</div>
   <div class="balloon b3">🎈</div>
   <div class="balloon b4">🎈</div>
   <div class="balloon b5">🎈</div>
+  <div class="balloon b6">🎈</div>
 </div>
 
-<header class="hero">
-  <p class="pre-title">✨ A Very Special Day ✨</p>
-  <h1>Happy Birthday<br><span>Anvi</span></h1>
-  <div class="age-badge">
-    <span class="num">6</span>
-    <span class="label">years old today!</span>
+<!-- HERO SECTION -->
+<header class="hero" id="hero">
+  <div class="hero-content">
+    <p class="pre-title">A Very Special Day</p>
+    <h1 class="hero-title">Happy Birthday</h1>
+    <h1 class="hero-name">Anvi</h1>
+    <div class="age-badge">
+      <span class="num">6</span>
+      <span class="label">years old today!</span>
+    </div>
+    <p class="scroll-hint">Scroll down to explore <span class="arrow-down">&darr;</span></p>
   </div>
-  <p class="scroll-hint">scroll down 💕</p>
 </header>
 
-<!-- SECTION A: Fade-up stagger grid -->
-<section class="sec-a">
-  <h2 class="reveal-up">Our Sweet Moments 🌸</h2>
-  <div class="grid-a">
-    <div class="ph reveal-up d1"><img src="images/photo1.jpg" alt=""></div>
-    <div class="ph reveal-up d2"><img src="images/photo2.jpg" alt=""></div>
-    <div class="ph reveal-up d3"><img src="images/photo3.jpg" alt=""></div>
-    <div class="ph reveal-up d4"><img src="images/photo4.jpg" alt=""></div>
-    <div class="ph reveal-up d5"><img src="images/photo5.jpg" alt=""></div>
-  </div>
-</section>
-
-<div class="divider">🎀 🌷 🎈 🌷 🎀</div>
-<!-- SECTION B: Big alternating slide-in polaroids -->
-<section class="sec-b">
-  <h2 class="reveal-up">Little Adventures 🧸</h2>
-
-  <div class="big-photo reveal-left">
-    <div class="sticker s1">⭐</div>
-    <img src="images/photo6.jpg" alt="">
-  </div>
-
-  <div class="big-photo reveal-right">
-    <div class="sticker s2">🌈</div>
-    <img src="images/photo7.jpg" alt="">
-  </div>
-
-  <div class="big-photo reveal-left">
-    <div class="sticker s3">💫</div>
-    <img src="images/photo8.jpg" alt="">
-  </div>
-
-  <div class="big-photo reveal-right">
-    <div class="sticker s4">🦋</div>
-    <img src="images/photo9.jpg" alt="">
-  </div>
-
-  <div class="big-photo reveal-left">
-    <div class="sticker s5">🌸</div>
-    <img src="images/photo10.jpg" alt="">
-  </div>
-</section>
-
-<div class="divider">🌟 🎂 🧁 🎂 🌟</div>
-
-<!-- SECTION C: Scrapbook scattered zoom -->
-<section class="sec-c">
-  <h2 class="reveal-up">Playful Days 🎨</h2>
-  <div class="scrap-wrap">
-    <div class="scrap reveal-zoom r1"><img src="images/photo11.jpg" alt=""></div>
-    <div class="scrap reveal-zoom r2"><img src="images/photo12.jpg" alt=""></div>
-    <div class="scrap reveal-zoom r3"><img src="images/photo13.jpg" alt=""></div>
-    <div class="scrap reveal-zoom r4"><img src="images/photo14.jpg" alt=""></div>
-    <div class="scrap reveal-zoom r5"><img src="images/photo15.jpg" alt=""></div>
-  </div>
-</section>
-
-<div c
-  
-<!-- THE BOOK: real page-flip with 10 photos -->
-<section class="book-section">
-  <h2 class="reveal-up">Anvi's Album 📖</h2>
-  <p class="book-hint reveal-up">scroll to turn the pages</p>
-
-  <div class="book-scroll-track">
-    <div class="book-sticky">
-      <div class="book" id="book">
-
-        <div class="cover">
-          <div class="cover-face front-cover">
-            <span>Anvi's<br>Memories</span>
-          </div>
-          <div class="cover-face back-cover"></div>
-        </div>
-
-        <div class="sheet" style="z-index:5">
-          <div class="face front"><img src="images/photo16.jpg" alt=""></div>
-          <div class="face back"><img src="images/photo17.jpg" alt=""></div>
-        </div>
-
-        <div class="sheet" style="z-index:4">
-          <div class="face front"><img src="images/photo18.jpg" alt=""></div>
-          <div class="face back"><img src="images/photo19.jpg" alt=""></div>
-        </div>
-
-        <div class="sheet" style="z-index:3">
-          <div class="face front"><img src="images/photo20.jpg" alt=""></div>
-          <div class="face back"><img src="images/photo21.jpg" alt=""></div>
-        </div>
-
-        <div class="sheet" style="z-index:2">
-          <div class="face front"><img src="images/photo22.jpg" alt=""></div>
-          <div class="face back"><img src="images/photo23.jpg" alt=""></div>
-        </div>
-
-        <div class="sheet" style="z-index:1">
-          <div class="face front"><img src="images/photo24.jpg" alt=""></div>
-          <div class="face back"><img src="images/photo25.jpg" alt=""></div>
-        </div>
-
-        <div class="back-cover-final"></div>
-
-      </div>
+<!-- PHOTO GRID SECTION -->
+<section class="photo-grid-section">
+  <h2 class="section-title reveal-up">Our Sweet Moments</h2>
+  <p class="section-subtitle reveal-up">Every picture tells a little story of joy</p>
+  <div class="photo-grid">
+    <div class="photo-card reveal-up d1">
+      <img src="photo1.png" alt="Anvi photo 1">
+      <div class="photo-caption">My little star</div>
+    </div>
+    <div class="photo-card reveal-up d2">
+      <img src="photo2.png" alt="Anvi photo 2">
+      <div class="photo-caption">So much happiness</div>
+    </div>
+    <div class="photo-card reveal-up d3">
+      <img src="photo3.png" alt="Anvi photo 3">
+      <div class="photo-caption">Pure sunshine</div>
+    </div>
+    <div class="photo-card reveal-up d4">
+      <img src="photo4.png" alt="Anvi photo 4">
+      <div class="photo-caption">Cutie pie</div>
+    </div>
+    <div class="photo-card reveal-up d5">
+      <img src="photo5.png" alt="Anvi photo 5">
+      <div class="photo-caption">Always smiling</div>
     </div>
   </div>
 </section>
 
-<!-- CLOSING MESSAGE -->
-<section class="closing">
-  <div class="card reveal-up">
-    <p class="title">Happy Birthday Anvi! 🎉</p>
-    <p>May your day be as bright and beautiful as your smile. Here's to many more birthdays filled with love, laughter, and endless cuteness.</p>
-    <p class="signoff">Love,<br>Bhai 💖</p>
+<div class="divider reveal-up">🎀 🌷 🎈 🌷 🎀</div>
+
+<!-- ALTERNATING POLAROIDS -->
+<section class="polaroid-section">
+  <h2 class="section-title reveal-up">Little Adventures</h2>
+  <p class="section-subtitle reveal-up">Growing up so fast, one moment at a time</p>
+
+  <div class="polaroid reveal-left">
+    <div class="polaroid-sticker">⭐</div>
+    <img src="photo6.png" alt="Anvi adventure 1">
+    <div class="polaroid-caption">My superhero</div>
+  </div>
+
+  <div class="polaroid reveal-right">
+    <div class="polaroid-sticker right">🌈</div>
+    <img src="photo7.png" alt="Anvi adventure 2">
+    <div class="polaroid-caption">Bright as a rainbow</div>
+  </div>
+
+  <div class="polaroid reveal-left">
+    <div class="polaroid-sticker">💫</div>
+    <img src="photo8.png" alt="Anvi adventure 3">
+    <div class="polaroid-caption">Shining always</div>
+  </div>
+
+  <div class="polaroid reveal-right">
+    <div class="polaroid-sticker right">🦋</div>
+    <img src="photo9.png" alt="Anvi adventure 4">
+    <div class="polaroid-caption">Little butterfly</div>
+  </div>
+
+  <div class="polaroid reveal-left">
+    <div class="polaroid-sticker">🌸</div>
+    <img src="photo10.png" alt="Anvi adventure 5">
+    <div class="polaroid-caption">My whole world</div>
   </div>
 </section>
 
-<footer>
-  <p>Made with 💕 for the best little sister — Anvi</p>
+<div class="divider reveal-up">🌟 🎂 🧁 🎂 🌟</div>
+
+<!-- BIRTHDAY WISHES SECTION -->
+<section class="wishes-section">
+  <h2 class="section-title reveal-up">A Message For You</h2>
+  <div class="wish-card reveal-zoom">
+    <div class="wish-icon">💌</div>
+    <p class="wish-text">
+      Happy 6th Birthday, my dearest Anvi! You bring so much light and laughter into our lives.
+      Every day with you is a gift, and watching you grow is the greatest joy.
+      May your life be filled with as much happiness as you give to everyone around you.
+    </p>
+    <p class="wish-text">
+      You are the most precious little sister in the whole world.
+      Keep smiling, keep shining, and keep being the amazing little person you are.
+      The world is brighter because you are in it!
+    </p>
+    <div class="wish-signoff">
+      <p class="from">With all my love,</p>
+      <p class="from-name">Bhai 💖</p>
+    </div>
+  </div>
+</section>
+
+<!-- CAKE SECTION -->
+<section class="cake-section">
+  <h2 class="section-title reveal-up">Make a Wish!</h2>
+  <div class="cake-container reveal-zoom" id="cakeContainer">
+    <div class="cake">
+      <div class="cake-plate"></div>
+      <div class="cake-layer bottom"></div>
+      <div class="cake-layer middle"></div>
+      <div class="cake-layer top"></div>
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+    </div>
+    <p class="cake-hint">Tap the cake to blow out the candle!</p>
+    <div class="cake-message" id="cakeMessage">Wish granted! Your wish will come true!</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="footer-text">Made with love for the best little sister in the world — Anvi</p>
+  <p class="footer-heart">💖</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
-            </html>
+</html>
