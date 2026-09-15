@@ -58,3 +58,37 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.2 });
 revealEls.forEach((el) => revealObserver.observe(el));
+/* ---------- BOOK SCROLL-DRIVEN PAGE FLIP ---------- */
+const bookTrack = document.querySelector('.book-scroll-track');
+const cover = document.querySelector('.cover');
+const sheets = document.querySelectorAll('.sheet');
+
+// Order: cover first, then sheets in order
+const pages = [cover, ...sheets];
+const numPages = pages.length;
+
+function updateBook() {
+  if (!bookTrack) return;
+
+  const rect = bookTrack.getBoundingClientRect();
+  const trackHeight = bookTrack.offsetHeight;
+  const scrollable = trackHeight - window.innerHeight;
+  const scrolledInto = -rect.top;
+
+  let progress = scrolledInto / scrollable;
+  progress = Math.max(0, Math.min(1, progress));
+
+  const totalProgress = progress * numPages;
+
+  pages.forEach((page, i) => {
+    let local = totalProgress - i;
+    local = Math.max(0, Math.min(1, local));
+
+    const rotation = -180 * local;
+    page.style.transform = `rotateY(${rotation}deg)`;
+
+    // Flip z-index once page passes halfway, so it stacks correctly
+    if (local > 0.5) {
+      page.style.zIndex = i + 1; // flipped pages stack ascending (left side)
+    } else {
+      page.style.zIndex = numPages - i + 10; // unf
